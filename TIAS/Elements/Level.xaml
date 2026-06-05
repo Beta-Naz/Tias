@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="TIAS.Elements.Level"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TIAS.Elements"
+             mc:Ignorable="d" Cursor="Hand" MouseDown="SelectLevel">
+    <Grid>
+        <Border Background="#4AFFFFFF" 
+         CornerRadius="10" 
+         Margin="0,0,0,10"
+         Padding="15">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Background" Value="#4AFFFFFF"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Blue"/>
+                            <Setter Property="BorderBrush" Value="Blue"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" 
+                 Background="Gold" 
+                 Width="40" 
+                 Height="40" 
+                 CornerRadius="20"
+                 Margin="0,0,15,0">
+                    <TextBlock Text="⚔" 
+                        FontSize="20" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Foreground="Black"/>
+                </Border>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="{Binding LevelName}" 
+                        FontSize="16" 
+                        FontWeight="Bold" 
+                        Foreground="White"/>
+                    <TextBlock Text="{Binding LevelDescription}" 
+                        FontSize="12" 
+                        Foreground="#CCFFFFFF"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

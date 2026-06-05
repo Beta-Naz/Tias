@@ -1,0 +1,69 @@
+﻿<Page x:Class="TIAS.Pages.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TIAS.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainMenu">
+    <Page.Background>
+        <ImageBrush ImageSource="/Images/Background/BackgroundMainMenu.png" Stretch="UniformToFill"/>
+    </Page.Background>
+    <Grid>
+        <Rectangle Fill="#99000000"/>
+        <Grid VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Название игры -->
+            <TextBlock Grid.Row="0" 
+                       Text="TIAS" 
+                       FontFamily="Georgia"
+                       FontSize="75"
+                       FontWeight="Bold"
+                       Foreground="Gold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,50">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Color="Black" BlurRadius="10"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <!-- Кнопка ИГРАТЬ -->
+            <StackPanel Grid.Row="1">
+                <Button 
+                     Content="ИГРАТЬ" 
+                     FontSize="28"
+                     Margin="150,10"
+                     FontWeight="Bold"
+                     FontFamily="Arial"
+                     Background="#AA0B6000"
+                     Foreground="White"
+                     Cursor="Hand"
+                     Padding="5"
+                     Click="Play_Click"/>
+                <Button Grid.Row="1" 
+                     Content="НАСТРОЙКИ" 
+                     Margin="150,10"
+                     FontSize="28"
+                     FontWeight="Bold"
+                     FontFamily="Arial"
+                     Background="#AA0047AB"
+                     Foreground="White"
+                     Cursor="Hand"
+                     Padding="5"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Grid.Row="2" 
+                       Text="Сабитов Назир Назипович"
+                       FontFamily="Arial"
+                       FontSize="16"
+                       Foreground="#CCFFFFFF"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom"/>
+    </Grid>
+</Page>
