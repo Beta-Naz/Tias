@@ -24,6 +24,7 @@ namespace TIAS.Core.Database
         public List<HexMap> LoadAllMaps()
         {
 
+
             var maps = new List<HexMap>();
 
             using (var connection = new MySqlConnection(connectionString))
